@@ -8,7 +8,7 @@ include:canonical
 include:category-container
 include:dart
 include:debian
-include:docker
+# include:docker
 include:embedly
 include:facebook-dev
 include:fastlane
@@ -28,12 +28,12 @@ include:homebrew
 include:huawei-dev
 include:intel-dev
 include:java
-include:jetbrains
-include:jetbrains-ai
+# include:jetbrains
+# include:jetbrains-ai
 include:jfrog
 include:jsdelivr
 include:kubernetes
-include:microsoft-dev
+# include:microsoft-dev
 include:mongodb
 include:nginx
 include:nixos

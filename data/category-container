@@ -1,5 +1,5 @@
 azurecr.io
-docker.io
+# docker.io
 ecr.aws
 gcr.io
 ghcr.io

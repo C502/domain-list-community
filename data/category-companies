@@ -2,10 +2,10 @@
 
 include:acer
 include:adobe
-include:alibabacloud
+# include:alibabacloud
 include:amazon
 include:amd
-include:apple
+# include:apple
 include:asus
 include:atlassian
 include:att
@@ -22,30 +22,30 @@ include:digitalocean
 include:duolingo
 include:faronics
 include:giffgaff
-include:gigabyte
+# include:gigabyte
 include:godaddy
 include:google
 include:hetzner
 include:hinet
 include:hkbn
-include:hp
+# include:hp
 include:hubblephone
 include:ibm
 include:inshot
-include:intel
+# include:intel
 include:kakao
 include:lg
 include:logitech
 include:mailru
 include:meta
-include:microsoft
+# include:microsoft
 include:mikrotik
 include:mindgeek
 include:mozilla
 include:musixmatch
 include:naver
 include:neuralink
-include:nvidia
+# include:nvidia
 include:openai
 include:openweather
 include:oracle

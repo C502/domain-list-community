@@ -6,12 +6,12 @@ include:bluepoch-games
 include:curseforge
 include:cygames
 include:ea
-include:epicgames
+# include:epicgames
 include:garena
 include:gog
 include:illusion
 include:lowiro
-include:mihoyo
+# include:mihoyo
 include:nexon
 include:nintendo
 include:nikke
@@ -24,7 +24,7 @@ include:playstation
 include:purikonejp
 include:riot
 include:rockstar
-include:steam
+# include:steam
 include:steamunlocked
 include:tencent-games
 include:ubisoft
