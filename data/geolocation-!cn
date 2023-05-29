@@ -1,5 +1,11 @@
 # This list contains domains that don't have access point in China mainland. This is opposite to geolocation-cn.
 
+include:bing
+include:onedrive
+
+# TLDs (Top Level Domains) used outside China mainland
+include:tld-!cn
+
 # Anime, Comics & Games
 include:category-acg
 
@@ -71,7 +77,7 @@ include:category-ecommerce
 include:anandtech
 include:betterexplained
 include:brilliant
-include:category-scholar-!cn
+# include:category-scholar-!cn
 include:cern
 include:chinapower
 include:cnet
@@ -92,7 +98,7 @@ include:lifewire
 include:masterclass
 include:mzed
 include:oreilly
-include:pearson
+# include:pearson
 include:sitepoint
 include:skillshare
 include:spiceworks
@@ -100,7 +106,7 @@ include:techtimes
 include:ted
 include:udacity
 include:udemy
-include:w3schools
+# include:w3schools
 
 chemequations.com # 线上化学方程式！
 
@@ -244,13 +250,13 @@ include:wordpress
 include:zendesk
 include:zeplin
 include:zoho
-include:zoom
+# include:zoom
 
 biliplus.com # BiliPlus
 
-# Online LaTeX Editor
-cloudlatex.io
-overleaf.com
+# # Online LaTeX Editor
+# cloudlatex.io
+# overleaf.com
 
 # Aurora Open Source Software (https://gitlab.com/AuroraOSS)
 auroraoss.com
@@ -275,7 +281,7 @@ include:piratebay
 include:rarbg
 
 # VPN services
-include:category-vpnservices
+# include:category-vpnservices
 
 # Wiki
 include:fandom

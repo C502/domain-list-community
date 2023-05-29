@@ -1,3 +1,8 @@
+
+```
+v2dat.exe unpack geosite --nocn ..\dlc.dat -o out -f geolocation-!cn
+```
+
 # Domain list community
 
 This project manages a list of domains, to be used as geosites for routing purpose in Project V.
