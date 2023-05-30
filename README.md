@@ -1,6 +1,10 @@
 
 ```
-v2dat.exe unpack geosite --nocn ..\dlc.dat -o out -f geolocation-!cn
+git fetch github master:master
+git rebase master
+go run ./ --datapath=./data
+v2dat.exe unpack geosite --nocn .\dlc.dat -o out -f geolocation-!cn
+scp ./out/dlc_geolocation-!cn.txt labwrt:/etc/mosdns/proxy-list.txt
 ```
 
 # Domain list community
