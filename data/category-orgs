@@ -5,7 +5,7 @@ include:creativecommons
 include:csis
 include:emojipedia
 include:f-droid
-include:ieee
+# include:ieee
 include:nist
 include:openstreetmap
 include:paskoocheh
