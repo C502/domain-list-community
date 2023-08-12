@@ -7,6 +7,8 @@ v2dat.exe unpack geosite --nocn .\dlc.dat -o out -f geolocation-!cn
 scp ./out/dlc_geolocation-!cn.txt labwrt:/etc/mosdns/proxy-list.txt
 ```
 
+针对校园网优化的，保守的域名分流规则配置。未知域名一律直连（需要的时候开global）。
+
 # Domain list community
 
 This project manages a list of domains, to be used as geosites for routing purpose in Project V.
