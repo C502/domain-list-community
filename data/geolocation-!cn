@@ -3,6 +3,11 @@
 hub.docker.com
 include:bing
 include:onedrive
+docusaurus.io
+contentsync.onenote.com
+eosamsterdam.net
+eosflare.io
+sqlitetutorial.net
 
 # TLDs (Top Level Domains) used outside China mainland
 include:tld-!cn
