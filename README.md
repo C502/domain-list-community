@@ -5,9 +5,16 @@ git rebase master
 go run ./ --datapath=./data
 v2dat.exe unpack geosite --nocn .\dlc.dat -o out -f geolocation-!cn
 scp ./out/dlc_geolocation-!cn.txt labwrt:/etc/mosdns/proxy-list.txt
+ssh labwrt /etc/init.d/mosdns restart
+python .\clash-config-gen.py > clash.yaml
 ```
 
 针对校园网优化的，保守的域名分流规则配置。未知域名一律直连（需要的时候开global）。
+- 常见的域名，校园网连通性较好的域名从`geolocation-!cn`删去（直连）
+- steam相关域名删去
+
+注：
+- 需要分流的域名添加到`data\geolocation-!cn`。
 
 # Domain list community
 
