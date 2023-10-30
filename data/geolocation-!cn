@@ -1,5 +1,8 @@
 # This list contains domains that don't have access point in China mainland. This is opposite to geolocation-cn.
 
+api.github.com
+qemu.org
+ton.org
 hub.docker.com
 include:bing
 include:onedrive
