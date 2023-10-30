@@ -4,16 +4,16 @@ proxy-groups:
     name: 🔰国外流量
     type: select
     proxies:
-      - xjp1
-      - xjp2
+      - sg1
+      - sg2
       - DIRECT
   -
     name: ⚓️其他流量
     type: select
     proxies:
       - DIRECT
-      - xjp1
-      - xjp2
+      - sg1
+      - sg2
 
 
 rules:
