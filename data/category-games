@@ -19,7 +19,7 @@ include:op
 include:osu
 include:pandanet
 include:pinkcore
-include:projectsekai
+# include:projectsekai
 include:playstation
 include:purikonejp
 include:riot
