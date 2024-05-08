@@ -32,5 +32,10 @@ jobs:
         name: 'dlc_geolocation-!cn.txt'
         path: './out/dlc_geolocation-!cn.txt'
 
-    
-    
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: 'dlc_geolocation-!cn.txt'
+
+permissions:
+  contents: write
