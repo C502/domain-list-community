@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - C502
+    - c502
   workflow_dispatch:
   
 jobs:
