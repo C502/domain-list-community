@@ -6,6 +6,8 @@ on:
   
 jobs:
   build_proxy_list:
+    permissions:
+      contents: write
     name: build_proxy_list
     runs-on: ubuntu-22.04
     steps:
@@ -24,18 +26,16 @@ jobs:
       run: go run ./ --datapath=./data
 
     - name: Extract txt
-      run: mkdir out && ./v2dat unpack geosite --nocn ./dlc.dat -o out -f 'geolocation-!cn'
+      run: mkdir out && ./v2dat unpack geosite --nocn ./dlc.dat -o out -f 'geolocation-!cn' && mv './out/dlc_geolocation-!cn.txt' 'dlc_geolocation-!cn.txt'
 
     - name: Upload file to Artifacts
       uses: actions/upload-artifact@v3
       with:
         name: 'dlc_geolocation-!cn.txt'
-        path: './out/dlc_geolocation-!cn.txt'
+        path: './dlc_geolocation-!cn.txt'
 
     - name: Release
-      uses: softprops/action-gh-release@v2
+    - uses: ncipollo/release-action@v1
       with:
-        files: 'dlc_geolocation-!cn.txt'
+        artifacts: 'dlc_geolocation-!cn.txt'
 
-permissions:
-  contents: write
