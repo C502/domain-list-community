@@ -24,7 +24,7 @@ jobs:
       run: go run ./ --datapath=./data
 
     - name: Extract txt
-      run: ./v2dat unpack geosite --nocn ./dlc.dat -o out -f 'geolocation-!cn'
+      run: mkdir out && ./v2dat unpack geosite --nocn ./dlc.dat -o out -f 'geolocation-!cn'
 
     - name: Upload file to Artifacts
       uses: actions/upload-artifact@v3
