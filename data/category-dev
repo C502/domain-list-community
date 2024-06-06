@@ -8,7 +8,7 @@ include:canonical
 include:category-container
 include:dart
 include:debian
-# include:docker
+include:docker
 include:embedly
 include:facebook-dev
 include:fastlane
