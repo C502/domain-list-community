@@ -1,5 +1,5 @@
 include:2kgames
-include:bilibili-game
+# include:bilibili-game
 include:blizzard
 include:bluearchive
 include:bluepoch-games
@@ -26,7 +26,7 @@ include:riot
 include:rockstar
 # include:steam
 include:steamunlocked
-include:tencent-games
+# include:tencent-games
 include:ubisoft
 include:xbox
 include:ynoproject

@@ -55,7 +55,7 @@ include:scala
 include:sourcehut
 include:stackexchange
 include:strikingly
-include:tencent-dev
+# include:tencent-dev
 include:termux
 include:thelinuxfoundation
 include:topcoder

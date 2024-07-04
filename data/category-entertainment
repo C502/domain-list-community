@@ -31,7 +31,7 @@ include:kktv
 include:lastfm
 include:litv
 include:manhuagui
-include:mihoyo
+# include:mihoyo
 include:mudvod
 include:mytvsuper
 include:netflix
