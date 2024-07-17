@@ -1,0 +1,39 @@
+
+stages:          # List of stages for jobs, and their order of execution
+  - build
+  - deploy
+
+build-job:       # This job runs in the build stage, which runs first.
+  image: golang:1.22.5-bookworm
+  stage: build
+  script:
+    - echo "Packing the data..."
+    - go run ./ --datapath=./data
+    - curl -L https://github.com/C502/v2dat/releases/latest/download/v2dat --output v2dat && chmod +x v2dat
+    - mkdir out && ./v2dat unpack geosite --nocn ./dlc.dat -o out -f 'geolocation-!cn' && mv './out/dlc_geolocation-!cn.txt' 'proxy-list.txt'
+    - echo "Unpacking complete."
+  artifacts:
+    paths:
+      - proxy-list.txt
+      - dlc.dat
+
+deploy-job:      # This job runs in the deploy stage.
+  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  environment: production
+  script:
+    # SSH-key from variable.
+    # https://docs.gitlab.com/ee/ci/ssh_keys/#ssh-keys-when-using-the-docker-executor
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - chmod 400 "$SSH_PRIVATE_KEY"
+    - ssh-add "$SSH_PRIVATE_KEY"
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo -e "Host *\n\t StrictHostKeyChecking no \n\n" > ~/.ssh/config
+    # Do the deploy.
+    # labwrt
+    - scp ./proxy-list.txt root@10.12.190.56:/etc/mosdns/proxy-list.txt && scp ./dlc.dat root@10.12.190.56:/opt/xray/geosite.dat && ssh root@10.12.190.56 /etc/init.d/mosdns restart
+    # srvwrt
+    - scp ./proxy-list.txt root@222.20.126.209:/etc/mosdns/proxy-list.txt && scp ./dlc.dat root@222.20.126.209:/opt/xray/geosite.dat && ssh root@222.20.126.209 /etc/init.d/mosdns restart
+    # labwrt-501
+    - scp ./proxy-list.txt root@10.12.190.51:/etc/mosdns/proxy-list.txt && scp ./dlc.dat root@10.12.190.51:/opt/xray/geosite.dat && ssh root@10.12.190.51 /etc/init.d/mosdns restart
