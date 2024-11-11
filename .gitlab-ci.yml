@@ -36,4 +36,4 @@ deploy-job:      # This job runs in the deploy stage.
     # srvwrt
     - scp ./proxy-list.txt root@222.20.126.209:/etc/mosdns/proxy-list.txt && scp ./dlc.dat root@222.20.126.209:/opt/xray/geosite.dat && ssh root@222.20.126.209 /etc/init.d/mosdns restart
     # labwrt-501
-    - scp ./proxy-list.txt root@10.12.190.51:/etc/mosdns/proxy-list.txt && scp ./dlc.dat root@10.12.190.51:/opt/xray/geosite.dat && ssh root@10.12.190.51 /etc/init.d/mosdns restart
+    # - scp ./proxy-list.txt root@10.12.190.51:/etc/mosdns/proxy-list.txt && scp ./dlc.dat root@10.12.190.51:/opt/xray/geosite.dat && ssh root@10.12.190.51 /etc/init.d/mosdns restart
